@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+  <title>Page Title</title>
+</head>
+
+<style>
+  #vertical{
+    writing-mode: vertical-rl;
+    text-orientation: sideways-left;
+  }
+</style>
+
+<body>
+  <div class="h-screen ">
+    <div class="mt-4 p-7 flex justify-center items-center h-[10%]">
+      <h1 class="text-2xl font-poppins font-medium tracking-[.08em]">Raphaël Assante</h1>
+      <div class="ml-auto button sm:hidden">Menu</div>
+    </div>
+    <div class="h-[90%] w-screen flex justify-between flex-col">
+      <div id="navbar" class="h-[100%] font-thin flex flex-col justify-center items-center hidden">
+        <div class="h-[80%] flex flex-col justify-center items-center">
+          <div  class="text-3xl text-center">KAO-LIANG & BETEL NUTS</div>
+          <hr class="w-full">
+          <div class="text-3xl">Print</div>
+          <hr class="w-full">
+          <div class="text-3xl">About/Contact</div>
+        </div>
+        <div class="h-[20%] w-full flex items-center justify-center">
+          <img class="w-[30px] h-[30px] " src="./images/logos/instagram.png" alt="">
+        </div>
+      </div>
+      <div id="content" class="h-[100%] p-2 bg-white">
+        <div class="h-[80%] flex flex-row justify-center gap-5 mt-4">
+          <div class="w-[15%] flex flex-row justify-center items-center" >
+            <div id="vertical" class=" h-full  text-end text-[1.6em] rotate-180 tracking-[.08em] font-semibold">KAO-LIANG & BETEL NUTS</div>
+          </div>
+          <div class="w-[70%]">
+            <img class=" h-auto" src="./images/1.jpeg" alt="">
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+</body>
+<script>
+  const button = document.querySelector('.button');
+  const navbar = document.querySelector('#navbar');
+  const content = document.querySelector('#content');
+  button.addEventListener('click', () => {
+    navbar.classList.toggle('hidden');
+    content.classList.toggle('hidden');
+  })
+</script>
+
+</html>
+
+
+
+
+<!-- <div class="w-[15%] flex justify-start items-center">
+      <h1 class="text-3xl font-poppins ml-5">Raphaël Assante</h1>
+    </div>
+    <div class=" h-full flex justify-start items-center underline underline-offset-8">
+      <h1 class="text-gl font-poppins ml-5 font-light ">KAO-LIANG & BETEL NUTS</h1>
+    </div>
+    <div class=" flex justify-start items-center">
+      <h1 class="text-gl font-poppins ml-5 font-light">Print</h1>
+    </div>
+    <div class=" flex justify-start items-center">
+      <h1 class="text-gl font-poppins ml-5 font-light">About/Contact</h1>
+    </div>
+    <div class=" flex justify-start items-center ml-auto">
+        <img class="w-[20px] h-[20px] " src="./images/logos/instagram.png" alt="">
+    </div> -->
