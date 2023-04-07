@@ -9,22 +9,24 @@
 </head>
 
 <style>
-      html, body {
-      height: 100vh;
-    }
+  html,
+  body {
+    height: 100vh;
+  }
+
   #vertical {
     writing-mode: vertical-rl;
     text-orientation: sideways-left;
   }
 </style>
 
-<body>
-  <div class="h-screen">
-    <div class="mt-4 p-7 flex justify-center items-center h-[5%]">
+<body class="font-poppins">
+  <div class="h-full">
+    <div class="fixed p-7 flex justify-center items-center h-[5%] w-full bg-white z-50 sm:justify-start sm:flex-row">
       <h1 class="text-2xl font-poppins font-medium tracking-[.08em]">Raphaël Assante</h1>
       <div class="ml-auto button sm:hidden">Menu</div>
     </div>
-    <div class="h-[95%] w-screen flex justify-between flex-col ">
+    <div class="h-[95%] w-screen flex justify-between flex-col">
       <div id="navbar" class="h-full font-thin flex flex-col items-center hidden">
         <div class="h-3/5 flex flex-col justify-center items-center">
           <div class="text-3xl text-center">KAO-LIANG & BETEL NUTS</div>
@@ -37,24 +39,47 @@
           <img class="w-[30px] h-[30px]" src="./images/logos/instagram.png" alt="">
         </div>
       </div>
-      <div id="content" class="h-[100%] p-2 box-border flex-col justify-center items-center">
+      <div id="content" class="mt-16 h-[100%] p-2 box-border flex-col justify-center items-center">
         <div class="h-[75%] flex justify-center items-center">
           <div class="w-[15%] h-[95%] flex flex-row justify-center items-center box-border ">
-            <div id="vertical" class="h-[65%] text-center text-[1.6em] rotate-180 tracking-[.08em] font-semibold bg-red-600">
+            <div id="vertical" class="h-[63%] text-end text-[1.52em] rotate-180 tracking-[.08em] font-semibold">
               KAO-LIANG & BETEL NUTS
             </div>
           </div>
           <div class="w-[70%]">
             <img class="h-auto" src="./images/1.jpeg" alt="">
             <div class="w-full h-[20%] flex justify-end">
-              <div class="w-[40%]  flex text-[1.3em] font-normal">
-                檳  榔  高  粱
+              <div class="w-[60%]  flex text-[1.5em] justify-end  font-normal">
+                檳 榔 高 粱
               </div>
             </div>
           </div>
         </div>
-      </div>
+        <div class="h-[60%]  w-full flex flex-col justify-start items-center">
+          <div class="w-[80%] text-start">
+            KAO-LIANG & BETEL NUTS is an ongoing photography project started in march 2020 in Taiwan, depicting the vivid
+            character and vibrant energy of the people and the area surrounding Longshan temple (龍山寺) in Wanhua district
+            (萬華區). An aging and neglected neighborhood, historical and spiritual heart of Taipei city, where homeless
+            people, sex workers, tea parlor hostesses, gangsters, flea market hawkers, monks, tourists and pensioners mix
+            daily in a microcosm of ever-changing scenes.
+          </div>
+        </div>
 
+      </div>
+      
+    </div>
+    <div class="mt-[80%] p-2 w-full flex flex-col gap-4">
+      <img src="./images/gallery/1.jpeg" alt="">
+      <img src="./images/gallery/2.jpeg" alt="">
+      <img src="./images/gallery/3.jpeg" alt="">
+      <img src="./images/gallery/4.jpeg" alt="">
+      <img src="./images/gallery/5.jpeg" alt="">
+      <img src="./images/gallery/6.jpeg" alt="">
+      <img src="./images/gallery/7.jpeg" alt="">
+      <img src="./images/gallery/8.jpeg" alt="">
+      <img src="./images/gallery/9.jpeg" alt="">
+      <img src="./images/gallery/10.jpeg" alt="">
+      <img src="./images/gallery/11.jpeg" alt="">
     </div>
   </div>
 
