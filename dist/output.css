@@ -750,6 +750,10 @@ video {
   font-weight: 100;
 }
 
+.font-normal {
+  font-weight: 400;
+}
+
 .tracking-\[\.08em\] {
   letter-spacing: .08em;
 }
