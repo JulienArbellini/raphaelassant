@@ -17,6 +17,7 @@
 
 <body>
   <div class="h-screen ">
+    <div id="viewport-size"></div>
     <div class="mt-4 p-7 flex justify-center items-center h-[10%]">
       <h1 class="text-2xl font-poppins font-medium tracking-[.08em]">Raphaël Assante</h1>
       <div class="ml-auto button sm:hidden">Menu</div>
@@ -37,8 +38,7 @@
       <div id="content" class="h-[100%] p-2 box-border ">
         <div class="h-[80%] flex justify-center items-center">
           <div class="w-[15%] h-[85%] flex flex-row justify-center items-center box-border ">
-            <div id="vertical"
-              class=" text-center text-[1.8em] rotate-180 tracking-[.08em] font-semibold">
+            <div id="vertical" class=" text-center text-[1.8em] rotate-180 tracking-[.08em] font-semibold">
               KAO-LIANG & BETEL NUTS
             </div>
           </div>
@@ -61,6 +61,13 @@
     navbar.classList.toggle('hidden');
     content.classList.toggle('hidden');
   })
+  var viewportWidth = window.innerWidth;
+  var viewportHeight = window.innerHeight;
+
+  // Affiche la taille du viewport dans la balise p avec l'id "viewport-size"
+  var viewportSizeElement = document.getElementById('viewport-size');
+  viewportSizeElement.textContent = viewportWidth + ' x ' + viewportHeight;
+
 </script>
 
 </html>
