@@ -1,0 +1,60 @@
+html,
+body {
+  height: 100vh;
+}
+
+#vertical {
+  writing-mode: vertical-rl;
+  text-orientation: sideways-left;
+}
+
+
+/* Pour les très très grands écrans */
+@media (min-width: 1550px) {
+  #title {
+    font-size: 40px;
+  }
+
+  #vertical {
+    position: absolute;
+    left: 340px;
+    top: 117px;
+    height: auto;
+    /* background-color: blue; */
+    font-size: 57px;
+    text-align: center;
+    width: 50px;
+    /* color: red; */
+  }
+
+
+  #content-desktop {
+    display: flex;
+    height: 100vh;
+  }
+
+  #img-main{
+    position: absolute;
+    top: 117px;
+    left: 455px;
+    height: 710px;
+    width: auto;
+  }
+  #ch-title{
+    position: absolute;
+    top: 825px;
+    left: 758px;
+    font-size: 38px;
+    width: auto;
+    /* color: red; */
+  }
+  #title-descr{
+    position: absolute;
+    top: 520px;
+    font-weight: 200;
+    left: 970px;
+    font-size: 19px;
+    width: 460px;
+    /* color: red; */
+  }
+}

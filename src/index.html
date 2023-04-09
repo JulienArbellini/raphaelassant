@@ -4,30 +4,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, height=devise-height, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/style/main.css">
   <link href="../dist/output.css" rel="stylesheet">
   <title>Page Title</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 </head>
 
-<style>
-  html,
-  body {
-    height: 100vh;
-  }
 
-  #vertical {
-    writing-mode: vertical-rl;
-    text-orientation: sideways-left;
-  }
-</style>
-
-<body class="font-poppins">
-  <div class="h-full">
-    <div class="fixed p-7 flex justify-center items-center h-[5%] w-full bg-white z-50 sm:justify-start sm:flex-row">
+<body class="font-poppins overflow-x-hidden">
+  <!-- <div id="viewport-size" class="bg-red-400"></div> -->
+  <div class="sm:h-screen">
+    <!-- Menu mobile condenced -->
+    <div id="menu-mobile"
+      class="fixed p-7 flex justify-center items-center h-[5%] w-full bg-white  z-50 lg:hidden">
       <h1 class="text-2xl font-poppins font-medium tracking-[.08em]">Raphaël Assante</h1>
-      <div class="ml-auto button sm:hidden">Menu</div>
+      <div class="ml-auto button">Menu</div>
     </div>
-    <div class="h-[95%] w-screen flex justify-between flex-col">
-      <div id="navbar" class="h-full font-thin flex flex-col items-center hidden">
+
+
+    <!-- Menu desktop -->
+    <div id="menu-desktop" class="fixed justify-center bg-white opacity-75 items-center w-full z-50 hidden lg:flex sm:p-[40px]">
+      <div class="w-50 flex justify-center items-center">
+        <h1 id="title" class="text-3xl  font-medium font-poppins ml-5">Raphaël Assante</h1>
+      </div>
+      <div id="menu-list" class="sm:w-[400px]  2xl:w-[519px] flex ml-[55px] justify-between">
+        <div class=" h-full flex justify-start items-center underline underline-offset-8">
+          <h1 class="text-gl font-poppins  font-light ">KAO-LIANG & BETEL NUTS</h1>
+        </div>
+        <div class=" flex justify-start items-center">
+          <h1 class="text-gl font-poppins font-light">Print</h1>
+        </div>
+        <div class=" flex justify-start items-center">
+          <h1 class="text-gl font-poppins font-light">About/Contact</h1>
+        </div>
+      </div>
+
+      <div class=" flex justify-start items-center ml-auto">
+        <img class="w-[20px] h-[20px] " src="./images/logos/instagram.png" alt="">
+      </div>
+    </div>
+    <!-- Main content -->
+    <div class="h-[100%] w-screen flex justify-between flex-col sm:h-[100%]">
+      <!-- Menu mobile open 698 667-->
+      <div id="navbar" class="h-screen font-thin flex flex-col items-center hidden">
         <div class="h-3/5 flex flex-col justify-center items-center">
           <div class="text-3xl text-center">KAO-LIANG & BETEL NUTS</div>
           <hr class="w-full">
@@ -39,48 +62,69 @@
           <img class="w-[30px] h-[30px]" src="./images/logos/instagram.png" alt="">
         </div>
       </div>
-      <div id="content" class="mt-16 h-[100%] p-2 box-border flex-col justify-center items-center">
-        <div class="h-[75%] flex justify-center items-center">
-          <div class="w-[15%] h-[95%] flex flex-row justify-center items-center box-border ">
-            <div id="vertical" class="h-[63%] text-end text-[1.52em] rotate-180 tracking-[.08em] font-semibold">
-              KAO-LIANG & BETEL NUTS
-            </div>
+      <!-- Main content -->
+      <div id="content" class="mt-16 h-[100%] p-2 box-border flex-col justify-center items-center relative sm:hidden">
+        <div class="min-h-[620px]">
+          <div id="vertical"
+            class="absolute top-[75px]  h-fit text-end text-[28px] rotate-180 tracking-[.08em] font-semibold z-index-1">
+            KAO-LIANG & BETEL NUTS
           </div>
-          <div class="w-[70%]">
-            <img class="h-auto" src="./images/1.jpeg" alt="">
-            <div class="w-full h-[20%] flex justify-end">
-              <div class="w-[60%]  flex text-[1.5em] justify-end  font-normal">
-                檳 榔 高 粱
-              </div>
-            </div>
+
+          <img class="absolute top-[75px] left-[70px] h-[400px] z-index-2" src="./images/1.jpeg" alt="">
+          <div class="absolute top-[472px] left-[222px] w-[120px]  flex text-[1.5em] justify-end  font-normal">
+            檳 榔 高 粱
           </div>
         </div>
-        <div class="h-[60%]  w-full flex flex-col justify-start items-center">
-          <div class="w-[80%] text-start">
-            KAO-LIANG & BETEL NUTS is an ongoing photography project started in march 2020 in Taiwan, depicting the vivid
+      </div>
+
+      <div id="content-desktop" class="box-border hidden sm:block">
+        <div id="vertical" class="absolute h-fit text-end rotate-180 font-semibold top-[132px] left-[270px] text-[44px]">
+          KAO-LIANG & BETEL NUTS
+        </div>
+        <img id="img-main" class="absolute top-[130px] left-[372px] w-[375px]" src="./images/1.jpeg" alt="">
+        <div id="ch-title" class="absolute top-[680px] left-[627px] text-[25px]">
+          檳 榔 高 粱
+        </div>
+        <div id="title-descr" class="text-start absolute w-[338px] top-[415px] left-[780px] text-[15px] font-[200]">
+          KAO-LIANG & BETEL NUTS is an ongoing photography project started in march 2020 in Taiwan, depicting the
+          vivid
+          character and vibrant energy of the people and the area surrounding Longshan temple (龍山寺) in Wanhua district
+          (萬華區). An aging and neglected neighborhood, historical and spiritual heart of Taipei city, where homeless
+          people, sex workers, tea parlor hostesses, gangsters, flea market hawkers, monks, tourists and pensioners
+          mix
+          daily in a microcosm of ever-changing scenes.
+        </div>
+      </div>
+
+      <div class="min-h-[420px]  w-full flex flex-col justify-start items-center sm:hidden ">
+        <div class="w-[80%] text-start">
+            KAO-LIANG & BETEL NUTS is an ongoing photography project started in march 2020 in Taiwan, depicting the
+            vivid
             character and vibrant energy of the people and the area surrounding Longshan temple (龍山寺) in Wanhua district
             (萬華區). An aging and neglected neighborhood, historical and spiritual heart of Taipei city, where homeless
-            people, sex workers, tea parlor hostesses, gangsters, flea market hawkers, monks, tourists and pensioners mix
+            people, sex workers, tea parlor hostesses, gangsters, flea market hawkers, monks, tourists and pensioners
+            mix
             daily in a microcosm of ever-changing scenes.
           </div>
-        </div>
+    </div>
 
-      </div>
-      
-    </div>
-    <div class="mt-[80%] p-2 w-full flex flex-col gap-4">
-      <img src="./images/gallery/1.jpeg" alt="">
-      <img src="./images/gallery/2.jpeg" alt="">
-      <img src="./images/gallery/3.jpeg" alt="">
-      <img src="./images/gallery/4.jpeg" alt="">
-      <img src="./images/gallery/5.jpeg" alt="">
-      <img src="./images/gallery/6.jpeg" alt="">
-      <img src="./images/gallery/7.jpeg" alt="">
-      <img src="./images/gallery/8.jpeg" alt="">
-      <img src="./images/gallery/9.jpeg" alt="">
-      <img src="./images/gallery/10.jpeg" alt="">
-      <img src="./images/gallery/11.jpeg" alt="">
-    </div>
+  </div>
+
+  </div>
+  <!-- Gallery -->
+  <div class="sm:p-8 w-full h-screen grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:mt-[7rem] ">
+    <img src="./images/gallery/1.jpeg" alt="">
+    <img src="./images/gallery/2.jpeg" alt="">
+    <img src="./images/gallery/3.jpeg" alt="">
+    <img src="./images/gallery/4.jpeg" alt="">
+    <img src="./images/gallery/5.jpeg" alt="">
+    <img src="./images/gallery/6.jpeg" alt="">
+    <img src="./images/gallery/7.jpeg" alt="">
+    <img src="./images/gallery/8.jpeg" alt="">
+    <img src="./images/gallery/9.jpeg" alt="">
+    <img src="./images/gallery/10.jpeg" alt="">
+    <img src="./images/gallery/11.jpeg" alt="">
+  </div>
   </div>
 
 </body>
@@ -92,26 +136,12 @@
     navbar.classList.toggle('hidden');
     content.classList.toggle('hidden');
   })
+  // window.addEventListener("resize", function () {
+  //   var width = window.innerWidth;
+  //   var height = window.innerHeight;
+  //   document.getElementById("viewport-size").innerHTML = "Viewport size: " + width + " x " + height;
+  // });
 
 </script>
 
 </html>
-
-
-
-
-<!-- <div class="w-[15%] flex justify-start items-center">
-      <h1 class="text-3xl font-poppins ml-5">Raphaël Assante</h1>
-    </div>
-    <div class=" h-full flex justify-start items-center underline underline-offset-8">
-      <h1 class="text-gl font-poppins ml-5 font-light ">KAO-LIANG & BETEL NUTS</h1>
-    </div>
-    <div class=" flex justify-start items-center">
-      <h1 class="text-gl font-poppins ml-5 font-light">Print</h1>
-    </div>
-    <div class=" flex justify-start items-center">
-      <h1 class="text-gl font-poppins ml-5 font-light">About/Contact</h1>
-    </div>
-    <div class=" flex justify-start items-center ml-auto">
-        <img class="w-[20px] h-[20px] " src="./images/logos/instagram.png" alt="">
-    </div> -->
