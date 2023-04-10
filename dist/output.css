@@ -612,6 +612,62 @@ video {
   margin-right: 0.75rem;
 }
 
+.mt-\[\] {
+  margin-top: ;
+}
+
+.mt-\[5\%\] {
+  margin-top: 5%;
+}
+
+.mt-7 {
+  margin-top: 1.75rem;
+}
+
+.mt-\[5rem\] {
+  margin-top: 5rem;
+}
+
+.mt-\[8rem\] {
+  margin-top: 8rem;
+}
+
+.mt-\[6rem\] {
+  margin-top: 6rem;
+}
+
+.mt-\[7rem\] {
+  margin-top: 7rem;
+}
+
+.mb-\[\] {
+  margin-bottom: ;
+}
+
+.mb-\[8rem\] {
+  margin-bottom: 8rem;
+}
+
+.mb-\[12rem\] {
+  margin-bottom: 12rem;
+}
+
+.mb-\[32rem\] {
+  margin-bottom: 32rem;
+}
+
+.mb-\[30\] {
+  margin-bottom: 30;
+}
+
+.mb-\[30px\] {
+  margin-bottom: 30px;
+}
+
+.mb-\[130px\] {
+  margin-bottom: 130px;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -750,6 +806,14 @@ video {
   width: 20rem;
 }
 
+.w-\[90\%\] {
+  width: 90%;
+}
+
+.w-\[85\%\] {
+  width: 85%;
+}
+
 .rotate-180 {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -795,6 +859,10 @@ video {
   gap: 1.5rem;
 }
 
+.gap-5 {
+  gap: 1.25rem;
+}
+
 .overflow-x-hidden {
   overflow-x: hidden;
 }
@@ -836,6 +904,10 @@ video {
   padding: 5%;
 }
 
+.p-5 {
+  padding: 1.25rem;
+}
+
 .pl-\[5\%\] {
   padding-left: 5%;
 }
@@ -858,6 +930,10 @@ video {
 
 .font-poppins {
   font-family: Poppins, sans-serif;
+}
+
+.font-\[\] {
+  font-family: ;
 }
 
 .text-2xl {
@@ -895,6 +971,16 @@ video {
   line-height: 1rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .font-\[200\] {
   font-weight: 200;
 }
@@ -917,6 +1003,14 @@ video {
 
 .font-thin {
   font-weight: 100;
+}
+
+.font-extralight {
+  font-weight: 200;
+}
+
+.font-\[300\] {
+  font-weight: 300;
 }
 
 .tracking-\[\.08em\] {
@@ -1049,8 +1143,44 @@ video {
     display: none;
   }
 
+  .lg\:w-\[\] {
+    width: ;
+  }
+
+  .lg\:w-\[60\%\] {
+    width: 60%;
+  }
+
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:items-start {
+    align-items: flex-start;
+  }
+
+  .lg\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .lg\:p-5 {
+    padding: 1.25rem;
+  }
+
+  .lg\:p-9 {
+    padding: 2.25rem;
+  }
+
+  .lg\:p-12 {
+    padding: 3rem;
+  }
+
+  .lg\:p-1 {
+    padding: 0.25rem;
+  }
+
+  .lg\:p-16 {
+    padding: 4rem;
   }
 }
 
