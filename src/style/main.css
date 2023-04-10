@@ -103,3 +103,12 @@ body {
     /* color: red; */
   }
 }
+
+#modal {
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+#modal.visible {
+  visibility: visible;
+  opacity: 1;
+}

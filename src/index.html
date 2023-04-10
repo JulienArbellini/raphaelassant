@@ -20,14 +20,14 @@
   <div class="sm:h-screen">
     <!-- Menu mobile condenced -->
     <div id="menu-mobile"
-      class="fixed p-7 flex justify-center items-center h-[5%]  w-full bg-white  z-50 lg:hidden">
+      class="fixed p-7 flex justify-center items-center h-[5%]  w-full bg-white  z-9 lg:hidden">
       <h1 class="text-2xl font-poppins font-medium tracking-[.08em]">Raphaël Assante</h1>
       <div class="ml-auto button">Menu</div>
     </div>
 
 
     <!-- Menu desktop -->
-    <div id="menu-desktop" class="fixed justify-center bg-white opacity-75 items-center w-full z-50 hidden lg:flex sm:p-[40px]">
+    <div id="menu-desktop" class="fixed justify-center bg-white opacity-75 items-center w-full z-9 hidden lg:flex sm:p-[40px]">
       <div class="w-50 flex justify-center items-center">
         <h1 id="title" class="text-3xl  font-medium font-poppins ml-5">Raphaël Assante</h1>
       </div>
@@ -70,7 +70,13 @@
             KAO-LIANG & BETEL NUTS
           </div>
 
-          <img class="absolute top-[75px] left-[70px] h-[400px] z-index-2 sm:h-[654px] sm:left-[280px]" src="./images/1.jpeg" alt="">
+          <img class="absolute top-[75px] left-[70px] h-[400px] z-index-2 sm:h-[654px] sm:left-[280px]" src="./images/1.jpeg" alt="" onclick="showModal()">
+          <div class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 invisible z-10" id="modal">
+            <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center ">
+              <button class="absolute top-0 right-0 m-4 text-3xl text-white hover:text-gray-300 focus:outline-none" onclick="closeModal()">X</button>
+              <img src="./images/1.jpeg" class="h-auto w-[80%] max-w-full max-h-full" alt="Image en grand">
+            </div>
+          </div>
           <div class="absolute top-[472px] sm:top-[730px] left-[222px] sm:left-[542px] w-fit   flex text-[1.5em] sm:text-[38px] justify-end  font-normal">
             檳 榔 高 粱
           </div>
@@ -81,7 +87,13 @@
         <div id="vertical" class="absolute h-fit text-center rotate-180 font-semibold top-[117px] left-[278px] text-[32px]">
           KAO-LIANG & BETEL NUTS
         </div>
-        <img id="img-main" class="absolute top-[117px] left-[370px] h-[402px]" src="./images/1.jpeg" alt="">
+        <img id="img-main" class="absolute top-[117px] left-[370px] h-[402px] cursor-pointer" src="./images/1.jpeg" alt="" onclick="showModal()">
+        <div class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 invisible z-10" id="modal">
+          <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center ">
+            <button class="absolute top-0 right-0 m-4 text-3xl text-white hover:text-gray-300 focus:outline-none" onclick="closeModal()">X</button>
+            <img src="./images/1.jpeg" class="w-auto h-[80%] max-w-full max-h-full" alt="Image en grand">
+          </div>
+        </div>
         <div id="ch-title" class="absolute top-[517px] left-[520px] text-[25px]">
           檳 榔 高 粱
         </div>
@@ -153,6 +165,18 @@
     text.classList.toggle('hidden');
     gallery.classList.toggle('hidden');
   })
+
+  function showModal() {
+  const modal = document.getElementById("modal");
+  modal.classList.add("visible");
+}
+function closeModal() {
+  const modal = document.getElementById("modal");
+  modal.classList.remove("visible");
+}
+
+
+  
   // window.addEventListener("resize", function () {
   //   var width = window.innerWidth;
   //   var height = window.innerHeight;
