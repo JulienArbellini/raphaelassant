@@ -11,41 +11,41 @@ body {
 
 /* Pour les très très grands écrans */
 
-@media (max-height: 715px) {
+@media (min-height: 715px) {
   #img-main{
     position: absolute;
-    top: 117px;
-    left: 370px;
-    max-height: 402px;
-    width: auto;
+    top: 130px;
+    left: 372px;
+    height: auto;
+    width: 375px;
   }
   #ch-title{
     position: absolute;
-    top: 517px;
-    left: 500px;
-    font-size: 30px;
+    top: 680px;
+    left: 627px;
+    font-size: 25px;
     width: auto;
-    /* color: red; */
+
   }
   #title-descr{
     position: absolute;
-    top: 310px;
+    top: 338px;
     font-weight: 200;
-    left: 675px;
-    font-size: 16px;
+    left: 780px;
+    font-size: 15px;
     width: 460px;
-    /* color: red; */
+
   }
   #vertical {
     position: absolute;
-    left: 278px;
-    top: 117px;
+    left: 270px;
+    top: 132px;
     height: auto;
-    /* background-color: blue; */
-    font-size: 32px;
+
+    font-size: 44px;
     text-align: center;
     width: 50px;
-    /* color: red; */
+
   }
 }
 
