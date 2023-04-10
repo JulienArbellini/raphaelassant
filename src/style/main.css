@@ -7,6 +7,11 @@ body {
   writing-mode: vertical-rl;
   text-orientation: sideways-left;
 }
+#vertical-mobile {
+  writing-mode: vertical-rl;
+  text-orientation: sideways-left;
+}
+
 
 
 /* Pour les très très grands écrans */
