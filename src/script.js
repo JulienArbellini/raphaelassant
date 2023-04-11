@@ -56,6 +56,11 @@ function fontSizeAdapted(myText, desiredWidth, desiredHeight) {
 
     //  menu-content
     let menuContent = $("#content-list");
+
+    //title
+    let title = $("#title");
+    console.log(title.offset().left);
+    console.log(title.width());
     
     // Récupération de la hauteur de l'image principale
     let mainImage = $("#img-main");
@@ -78,10 +83,8 @@ function fontSizeAdapted(myText, desiredWidth, desiredHeight) {
     
     // Application de la hauteur au titre en français
     let frTitle = $("#vertical");
-    let desiredWidth = 100;
-    let desiredHeight = mainImage.height();
     frTitle.css("top", topImage + "px");
-    frTitle.css("left", leftImage - 100 + "px");
+    frTitle.css("left", title.offset().left + title.width() - 60  + "px");
     frTitle.css("height", heightImage + "px");
     // fontSizeAdapted(frTitle, desiredWidth, desiredHeight);
     
