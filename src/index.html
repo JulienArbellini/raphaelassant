@@ -9,6 +9,7 @@
   <title>Page Title</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
@@ -32,16 +33,18 @@
         <h1 id="title" class="text-3xl  font-medium font-poppins ml-5">Raphaël Assante</h1>
       </div>
       <div id="menu-list" class="flex ml-[55px] justify-between">
-        <div class=" h-full flex justify-start items-center underline underline-offset-8">
-          <a href="" class="text-gl font-poppins  font-light ">KAO-LIANG & BETEL NUTS</a>
+        <div id="content-list" class="flex flex-row justify-between text-[2vh]">
+          <div class=" h-full flex justify-start items-center underline underline-offset-8">
+            <a href="" class="text-gl font-poppins  font-light ">KAO-LIANG & BETEL NUTS</a>
+          </div>
+          <div class=" flex justify-start items-center">
+            <a href="./print.html" class="text-gl font-poppins font-light">Print</a>
+          </div>
+          <div class=" flex justify-start items-center">
+            <a href="./contact.html" class="text-gl font-poppins font-light">About/Contact</a>
+          </div>
         </div>
-        <div class=" flex justify-start items-center">
-          <a href="./print.html" class="text-gl font-poppins font-light">Print</a>
         </div>
-        <div class=" flex justify-start items-center">
-          <a href="./contact.html" class="text-gl font-poppins font-light">About/Contact</a>
-        </div>
-      </div>
       <div class=" flex justify-start items-center ml-auto">
         <img class="w-[20px] h-[20px] " src="./images/logos/instagram.png" alt="">
       </div>
@@ -84,20 +87,20 @@
       </div>
 
       <div id="content-desktop" class="box-border hidden lg:block">
-        <div id="vertical" class="absolute h-[402px] text-center rotate-180 font-semibold top-[117px] left-[278px] text-[32px]">
+        <div id="vertical" class="absolute text-center h-fit rotate-180 font-semibold">
           KAO-LIANG & BETEL NUTS
         </div>
-        <img id="img-main" class="absolute top-[117px] left-[370px] h-[402px] cursor-pointer" src="./images/1.jpeg" alt="" onclick="showModal()">
+        <img id="img-main" class="absolute left-[370px] h-[70%] cursor-pointer" src="./images/1.jpeg" alt="" onclick="showModal()">
         <div class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 invisible z-10" id="modal">
           <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center ">
             <button class="absolute top-0 right-0 m-4 text-3xl text-white hover:text-gray-300 focus:outline-none" onclick="closeModal()">X</button>
             <img src="./images/1.jpeg" class="w-auto h-[80%] max-w-full max-h-full" alt="Image en grand">
           </div>
         </div>
-        <div id="ch-title" class="absolute top-[517px] left-[520px] text-[25px]">
+        <div id="ch-title" class="absolute text-[25px]">
           檳 榔 高 粱
         </div>
-        <div id="title-descr" class="text-start absolute w-[310px] top-[230px] left-[675px] text-[15px] font-[200]">
+        <div id="title-descr" class="text-start absolute w-fit font-[200] text-[2vh] box-border">
           KAO-LIANG & BETEL NUTS is an ongoing photography project started in march 2020 in Taiwan, depicting the
           vivid
           character and vibrant energy of the people and the area surrounding Longshan temple (龍山寺) in Wanhua district
