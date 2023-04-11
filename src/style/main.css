@@ -16,7 +16,7 @@ body {
 
 /* Pour les très très grands écrans */
 
-@media (min-height: 715px) {
+@media (min-height: 793px) {
   #img-main{
     position: absolute;
     top: 130px;
@@ -55,7 +55,7 @@ body {
 }
 
 
-@media (min-width: 1550px) && (min-height: 715px) {
+@media (min-width: 1550px) && (min-height: 793px) {
   #title {
     font-size: 40px;
   }
