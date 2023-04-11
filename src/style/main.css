@@ -117,17 +117,17 @@ body {
     width: 474px;
   }
 
-  #vertical {
+  /* #vertical {
     position: absolute;
     left: 340px;
     top: 117px;
     height: auto;
-    /* background-color: blue; */
+
     font-size: 57px;
     text-align: center;
     width: 50px;
-    /* color: red; */
-  }
+
+  } */
 
 
   #content-desktop {
@@ -141,14 +141,13 @@ body {
     left: 455px;
     width: auto;
   }
-  #ch-title{
+  /* #ch-title{
     position: absolute;
     top: 825px;
     left: 758px;
     font-size: 38px;
     width: auto;
-    /* color: red; */
-  }
+  } */
   /* #title-descr{
     position: absolute;
     top: 520px;

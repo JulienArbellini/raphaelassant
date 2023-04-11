@@ -82,7 +82,8 @@ function fontSizeAdapted(myText, desiredWidth, desiredHeight) {
     let desiredHeight = mainImage.height();
     frTitle.css("top", topImage + "px");
     frTitle.css("left", leftImage - 100 + "px");
-    fontSizeAdapted(frTitle, desiredWidth, desiredHeight);
+    frTitle.css("height", heightImage + "px");
+    // fontSizeAdapted(frTitle, desiredWidth, desiredHeight);
     
     let titleDescr = $("#title-descr");
     titleDescr.css("top", topImage+heightImage/2 - 20 + "px");

@@ -1126,6 +1126,62 @@ video {
   font-size: 2vh;
 }
 
+.text-\[6vh\] {
+  font-size: 6vh;
+}
+
+.text-\[4\.5vh\] {
+  font-size: 4.5vh;
+}
+
+.text-\[4\.7vh\] {
+  font-size: 4.7vh;
+}
+
+.text-\[4\.9vh\] {
+  font-size: 4.9vh;
+}
+
+.text-\[5\.4vh\] {
+  font-size: 5.4vh;
+}
+
+.text-\[5\.7vh\] {
+  font-size: 5.7vh;
+}
+
+.text-\[5\.6vh\] {
+  font-size: 5.6vh;
+}
+
+.text-\[5\.5vh\] {
+  font-size: 5.5vh;
+}
+
+.text-\[5\.3vh\] {
+  font-size: 5.3vh;
+}
+
+.text-\[7vh\] {
+  font-size: 7vh;
+}
+
+.text-\[6\.9vh\] {
+  font-size: 6.9vh;
+}
+
+.text-\[8vh\] {
+  font-size: 8vh;
+}
+
+.text-\[9vh\] {
+  font-size: 9vh;
+}
+
+.text-\[10vh\] {
+  font-size: 10vh;
+}
+
 .font-\[200\] {
   font-weight: 200;
 }
@@ -1186,6 +1242,14 @@ video {
 
 .text-\[vh\] {
   color: vh;
+}
+
+.text-\[4\.vh\] {
+  color: 4.vh;
+}
+
+.text-\[5\.vh\] {
+  color: 5.vh;
 }
 
 .underline {
