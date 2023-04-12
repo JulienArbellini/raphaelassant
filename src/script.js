@@ -53,7 +53,7 @@ function fontSizeAdapted(myText, desiredWidth, desiredHeight) {
   
   
   $(document).ready(function() {
-
+    $.ajaxSetup({ cache: false });
     //  menu-content
     let menuContent = $("#content-list");
 
