@@ -1,25 +1,72 @@
-// const button = document.querySelector('.button');
-const navbar = document.querySelector('#navbar');
-const content = document.querySelector('#content');
-const text = document.querySelector('#text-description-mobile');
-const gallery = document.querySelector('#gallery');
-// button.addEventListener('click', () => {
-//   navbar.classList.toggle('hidden');
-//   content.classList.toggle('hidden');
-//   text.classList.toggle('hidden');
-//   gallery.classList.toggle('hidden');
-// })
+document.addEventListener("DOMContentLoaded", function() {
+  const imageList = [
+    "./images/gallery/1.jpeg",
+    "./images/gallery/2.jpeg",
+    "./images/gallery/3.jpeg",
+    "./images/gallery/4.jpeg",
+    "./images/gallery/5.jpeg",
+    "./images/gallery/6.jpeg",
+    "./images/gallery/7.jpeg",
+    "./images/gallery/8.jpeg",
+    "./images/gallery/9.jpeg",
+    "./images/gallery/10.jpeg",
+    "./images/gallery/11.jpeg",
+  ];
 
-function showModal() {
-  const modal = document.getElementById("modal");
-  modal.classList.add("visible");
-  console.log("showModal");
+  function displayImages() {
+    const imageContainer = document.getElementById("gallery");
+
+    let count = 0;
+
+    imageList.forEach((imageSrc) => {
+      const img = document.createElement("img");
+      img.src = imageSrc;
+      img.id = "image" + count;
+      img.onclick = function() {
+        extendImage(img.id, img.src);
+      };
+      imageContainer.appendChild(img);
+      count++;
+    });
+  }
+
+  function extendImage(id, src) {
+    const parent = document.getElementById(id);
+    if (parent) {
+      const modalDesktop = document.createElement("div");
+      modalDesktop.id = "modal-desktop";
+      modalDesktop.classList.add("fixed", "top-0", "left-0", "w-full", "h-full", "items-center", "justify-center", "bg-black", "bg-opacity-50", "flex", "z-10");
+      const modalContent = document.createElement("div");
+      modalContent.classList.add("absolute", "top-0", "left-0", "w-full", "h-full", "flex", "items-center", "justify-center");
+      const closeButton = document.createElement("button");
+      closeButton.classList.add("absolute", "top-0", "right-0", "m-4", "text-3xl", "text-white", "hover:text-gray-300", "focus:outline-none");
+      closeButton.innerText = "X";
+      closeButton.onclick = function () {
+        closeModal(modalDesktop.id);
+      };
+      const image = document.createElement("img");
+      image.src = src;
+      image.classList.add("w-auto", "h-[80%]", "max-w-full", "max-h-full");
+      image.alt = "Image en grand";
+
+      modalContent.appendChild(closeButton);
+      modalContent.appendChild(image);
+      modalDesktop.appendChild(modalContent);
+      parent.insertAdjacentElement("afterend", modalDesktop);
+    }
+  }
+
+  displayImages();
+});
+
+
+function closeModal(id) {
+  const modal = document.getElementById(id);
+  modal.remove();
 }
-function closeModal() {
-  const modal = document.getElementById("modal");
-  modal.classList.remove("visible");
-  console.log("closeModal");
-}
+
+
+
 
 function fontSizeAdapted(myText, desiredWidth, desiredHeight) {
   // Définissez la taille de police initiale
@@ -47,53 +94,6 @@ function ajusterPolice(elementId, largeur, hauteur) {
     counter++; // Incrémentation du compteur à chaque tour de boucle
   }
 }
-
-
-// function responsive() {
-//   $.ajaxSetup({ cache: false });
-//   //  menu-content
-//   let menuContent = $("#content-list");
-
-//   //title
-//   let title = $("#title");
-//   console.log(title.offset().left);
-//   console.log(title.width());
-
-//   // Récupération de la hauteur de l'image principale
-//   let mainImage = $("#img-main");
-//   let menuTop = $("#menu-desktop");
-//   let heightMenuTop = parseFloat(menuTop.css("height"));
-//   let paddingMenuTop = parseFloat(menuTop.css("padding-top"));
-//   mainImage.css("top", heightMenuTop + 20 + "px");
-//   mainImage.css("left", menuContent.offset().left + "px");
-//   let heightImage = parseFloat(mainImage.css("height"));
-//   let topImage = parseFloat(mainImage.css("top"));
-//   let leftImage = parseFloat(mainImage.css("left"));
-//   let widthImage = parseFloat(mainImage.css("width"));
-
-//   // Application de la hauteur au titre en chinois
-//   let chTitle = $("#ch-title");
-//   let widthChTitle = parseFloat(chTitle.css("width"));
-//   chTitle.css("top", heightImage + topImage + "px");
-//   fontSizeAdapted(chTitle, widthImage / 2, 300);
-//   chTitle.css("left", leftImage + widthImage / 2 + "px");
-
-//   // Application de la hauteur au titre en français
-//   let frTitle = $("#vertical");
-//   frTitle.css("top", topImage + "px");
-//   frTitle.css("left", title.offset().left + title.width() - 60 + "px");
-//   frTitle.css("height", heightImage + "px");
-//   // fontSizeAdapted(frTitle, desiredWidth, desiredHeight);
-
-//   let titleDescr = $("#title-descr");
-//   titleDescr.css("top", topImage + heightImage / 2 - 20 + "px");
-//   titleDescr.css("height", heightImage * 0.6 + "px");
-//   titleDescr.css("max-width", widthImage + "px");
-//   // titleDescr.css("max-height", heightImage * 0.6 + "px");
-//   titleDescr.css("left", leftImage + widthImage + 50 + "px");
-
-//   menuContent.css("width", mainImage.width() + "px");
-// }
 
 
 

@@ -74,7 +74,7 @@
           </div>
 
           <img class="absolute top-[75px] left-[70px] h-[400px] z-index-2 sm:h-[654px] sm:left-[280px]" src="./images/1.jpeg" alt="" onclick="showModal()">
-          <div class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 invisible z-10" id="modal">
+          <div class="fixed top-0 left-0 w-full h-full items-center justify-center bg-black bg-opacity-50 hidden z-10" id="modal">
             <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center ">
               <button class="absolute top-0 right-0 m-4 text-3xl text-white hover:text-gray-300 focus:outline-none" onclick="closeModal()">X</button>
               <img src="./images/1.jpeg" class="h-auto w-[80%] max-w-full max-h-full" alt="Image en grand">
@@ -90,13 +90,13 @@
         <div id="vertical" class="absolute text-center w-fit rotate-180 font-semibold text-[5.5vh]">
           KAO-LIANG & BETEL NUTS
         </div>
-        <img id="img-main" class="absolute left-[370px] h-[70%] cursor-pointer" src="./images/1.jpeg" alt="" onclick="showModal()">
-        <div class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 invisible z-10" id="modal">
+        <img id="img-main" class="absolute left-[370px] h-[75%] cursor-pointer" src="./images/1.jpeg" alt="" onclick="extendImage(this.id, this.src)">
+        <!-- <div class="fixed top-0 left-0 w-full h-full items-center justify-center bg-black bg-opacity-50 hidden z-10" id="modal-desktop">
           <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center ">
-            <button class="absolute top-0 right-0 m-4 text-3xl text-white hover:text-gray-300 focus:outline-none" onclick="closeModal()">X</button>
+            <button class="absolute top-0 right-0 m-4 text-3xl text-white hover:text-gray-300 focus:outline-none" onclick="closeModal('modal-desktop')">X</button>
             <img src="./images/1.jpeg" class="w-auto h-[80%] max-w-full max-h-full" alt="Image en grand">
           </div>
-        </div>
+        </div> -->
         <div id="ch-title" class="absolute text-[25px]">
           檳 榔 高 粱
         </div>
@@ -128,17 +128,6 @@
   </div>
   <!-- Gallery -->
   <div id="gallery" class="sm:p-8 w-screen h-fit grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:mt-[7rem]">
-    <img src="./images/gallery/1.jpeg" alt="">
-    <img src="./images/gallery/2.jpeg" alt="">
-    <img src="./images/gallery/3.jpeg" alt="">
-    <img src="./images/gallery/4.jpeg" alt="">
-    <img src="./images/gallery/5.jpeg" alt="">
-    <img src="./images/gallery/6.jpeg" alt="">
-    <img src="./images/gallery/7.jpeg" alt="">
-    <img src="./images/gallery/8.jpeg" alt="">
-    <img src="./images/gallery/9.jpeg" alt="">
-    <img src="./images/gallery/10.jpeg" alt="">
-    <img src="./images/gallery/11.jpeg" alt="">
   </div>
 
 
