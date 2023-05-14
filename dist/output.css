@@ -709,6 +709,10 @@ video {
   height: 400;
 }
 
+.h-\[90\%\] {
+  height: 90%;
+}
+
 .max-h-full {
   max-height: 100%;
 }
@@ -844,6 +848,22 @@ video {
 
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
+}
+
+.bg-opacity-0 {
+  --tw-bg-opacity: 0;
+}
+
+.bg-opacity-80 {
+  --tw-bg-opacity: 0.8;
+}
+
+.bg-opacity-100 {
+  --tw-bg-opacity: 1;
+}
+
+.bg-opacity-90 {
+  --tw-bg-opacity: 0.9;
 }
 
 .p-2 {

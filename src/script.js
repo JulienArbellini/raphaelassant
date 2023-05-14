@@ -35,18 +35,18 @@ document.addEventListener("DOMContentLoaded", function() {
     if (parent) {
       const modalDesktop = document.createElement("div");
       modalDesktop.id = "modal-desktop";
-      modalDesktop.classList.add("fixed", "top-0", "left-0", "w-full", "h-full", "items-center", "justify-center", "bg-black", "bg-opacity-50", "flex", "z-10");
+      modalDesktop.classList.add("fixed", "top-0", "left-0", "w-full", "h-full", "items-center", "justify-center", "bg-black", "bg-opacity-90", "flex", "z-10");
       const modalContent = document.createElement("div");
       modalContent.classList.add("absolute", "top-0", "left-0", "w-full", "h-full", "flex", "items-center", "justify-center");
       const closeButton = document.createElement("button");
       closeButton.classList.add("absolute", "top-0", "right-0", "m-4", "text-3xl", "text-white", "hover:text-gray-300", "focus:outline-none");
-      closeButton.innerText = "X";
+      closeButton.innerText = "x";
       closeButton.onclick = function () {
         closeModal(modalDesktop.id);
       };
       const image = document.createElement("img");
       image.src = src;
-      image.classList.add("w-auto", "h-[80%]", "max-w-full", "max-h-full");
+      image.classList.add("w-auto", "h-[90%]", "max-w-full", "max-h-full");
       image.alt = "Image en grand";
 
       modalContent.appendChild(closeButton);
