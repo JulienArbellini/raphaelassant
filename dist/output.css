@@ -620,8 +620,16 @@ video {
   margin-top: auto;
 }
 
+.ml-20 {
+  margin-left: 5rem;
+}
+
 .box-border {
   box-sizing: border-box;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .flex {
@@ -693,6 +701,14 @@ video {
   height: 100vh;
 }
 
+.h-\[\] {
+  height: ;
+}
+
+.h-\[400\] {
+  height: 400;
+}
+
 .max-h-full {
   max-height: 100%;
 }
@@ -740,6 +756,14 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[400px\] {
+  width: 400px;
 }
 
 .max-w-full {

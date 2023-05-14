@@ -83,17 +83,27 @@ function fontSizeAdapted(myText, desiredWidth, desiredHeight) {
 }
 
 
-function ajusterPolice(elementId, largeur, hauteur) {
-  var element = document.getElementById(elementId);
-  var fontSize = parseInt(window.getComputedStyle(element).fontSize);
-  var counter = 0; // Ajout d'une variable compteur
+function ajusterPolice(element, hauteurCible) {
+  // Obtenez la largeur actuelle de l'élément et la taille de la police
+  let elementDOM = element.get(0);
+  console.log(elementDOM);
+  const largeurActuelle = elementDOM.getBoundingClientRect().width;
+  const hauteurActuelle = elementDOM.getBoundingClientRect().height;
+  console.log(hauteurCible);
+  console.log(hauteurActuelle);
+  const taillePoliceActuelle = parseFloat(window.getComputedStyle(elementDOM).fontSize);
 
-  while ((element.scrollWidth > largeur || element.scrollHeight > hauteur) && counter < 100) {
-    fontSize--;
-    element.style.fontSize = fontSize + 'px';
-    counter++; // Incrémentation du compteur à chaque tour de boucle
-  }
+  // Calculez le rapport entre la largeur cible et la largeur actuelle
+  const rapport = hauteurCible / hauteurActuelle;
+
+  // Ajustez la taille de la police en fonction du rapport
+  const nouvelleTaillePolice = taillePoliceActuelle * rapport;
+
+  // Appliquez la nouvelle taille de police à l'élément
+  elementDOM.style.fontSize = `${nouvelleTaillePolice}px`;
 }
+
+
 
 
 
@@ -105,13 +115,15 @@ $(document).ready(function() {
     // insérer le code de réponse ici
     $.ajaxSetup({ cache: false });
     //  menu-content
-    let menuContent = $("#content-list");
-  
+    let menuContent = $("#menu-list");
+    
     //title
     let title = $("#title");
-    console.log(title.offset().left);
-    console.log(title.width());
-  
+    // console.log(title.offset().left);
+    // console.log(title.width());
+    
+    menuContent.css("left", title.css("height")+100+"px");
+    
     // Récupération de la hauteur de l'image principale
     let mainImage = $("#img-main");
     let menuTop = $("#menu-desktop");
@@ -135,16 +147,16 @@ $(document).ready(function() {
     let frTitle = $("#vertical");
     frTitle.css("top", topImage + "px");
     frTitle.css("left", title.offset().left + title.width() - 60 + "px");
-    frTitle.css("height", heightImage + "px");
+    // frTitle.css("height", heightImage + "px");
+    ajusterPolice(frTitle, mainImage.height());
     // fontSizeAdapted(frTitle, desiredWidth, desiredHeight);
   
     let titleDescr = $("#title-descr");
     titleDescr.css("top", topImage + heightImage / 2 - 20 + "px");
     titleDescr.css("height", heightImage * 0.6 + "px");
     titleDescr.css("max-width", widthImage + "px");
-    // titleDescr.css("max-height", heightImage * 0.6 + "px");
+    titleDescr.css("max-height", heightImage * 0.6 + "px");
     titleDescr.css("left", leftImage + widthImage + 50 + "px");
-  
     menuContent.css("width", mainImage.width() + "px");
   
   }
