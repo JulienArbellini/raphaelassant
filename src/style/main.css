@@ -19,44 +19,7 @@ body {
     position: absolute;
     top: 130px;
     left: 372px;
-    /* height: auto;
-    width: 375px; */
   }
-  /* #ch-title{
-    position: absolute;
-    top: 680px;
-    left: 627px;
-    font-size: 25px;
-    width: auto;
-
-  } */
-  /* #title-descr{
-    position: absolute;
-    top: 420px;
-    font-weight: 200;
-    left: 780px;
-    font-size: 15px;
-    width: 336px;
-
-  } */
-  /* #vertical {
-    position: absolute;
-    left: 270px;
-    top: 132px;
-    height: auto;
-
-    font-size: 44px;
-    text-align: center;
-    width: 50px;
-
-  } */
-  /* #menu-list{
-    width: 374px;
-  } */
-
-  /* #content-list{
-    width: 375px;
-  } */
 }
 
 @media (min-height: 780px) {
@@ -64,45 +27,7 @@ body {
     position: absolute;
     top: 130px;
     left: 372px;
-    /* height: auto;
-    width: 375px; */
   }
-  /* #ch-title{
-    position: absolute;
-    top: 680px;
-    left: 627px;
-    font-size: 25px;
-    width: auto;
-    color: red;
-
-  } */
-  /* #title-descr{
-    position: absolute;
-    top: 420px;
-    font-weight: 200;
-    left: 780px;
-    font-size: 15px;
-    width: 336px;
-
-  } */
-  /* #vertical {
-    position: absolute;
-    left: 270px;
-    top: 132px;
-    height: auto;
-
-    font-size: 44px;
-    text-align: center;
-    width: 50px;
-
-  } */
-  /* #menu-list{
-    width: 374px;
-  } */
-
-  /* #content-list{
-    width: 375px;
-  } */
 }
 
 /* Pour les très très grands écrans */
@@ -117,18 +42,6 @@ body {
     width: 474px;
   }
 
-  /* #vertical {
-    position: absolute;
-    left: 340px;
-    top: 117px;
-    height: auto;
-
-    font-size: 57px;
-    text-align: center;
-    width: 50px;
-
-  } */
-
 
   #content-desktop {
     display: flex;
@@ -141,21 +54,6 @@ body {
     left: 455px;
     width: auto;
   }
-  /* #ch-title{
-    position: absolute;
-    top: 825px;
-    left: 758px;
-    font-size: 38px;
-    width: auto;
-  } */
-  /* #title-descr{
-    position: absolute;
-    top: 520px;
-    font-weight: 200;
-    left: 970px;
-    font-size: 19px;
-    width: 460px;
-  } */
 }
 
 
