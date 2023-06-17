@@ -129,7 +129,7 @@ $(document).ready(function() {
     let menuTop = $("#menu-desktop");
     let heightMenuTop = parseFloat(menuTop.css("height"));
     let paddingMenuTop = parseFloat(menuTop.css("padding-top"));
-    mainImage.css("top", heightMenuTop + 20 + "px");
+    mainImage.css("top", heightMenuTop + "px");
     mainImage.css("left", menuContent.offset().left + "px");
     let heightImage = parseFloat(mainImage.css("height"));
     let topImage = parseFloat(mainImage.css("top"));
@@ -152,11 +152,11 @@ $(document).ready(function() {
     // fontSizeAdapted(frTitle, desiredWidth, desiredHeight);
   
     let titleDescr = $("#title-descr");
-    titleDescr.css("top", topImage + heightImage / 2 - 20 + "px");
+    titleDescr.css("top", topImage + heightImage * 0.4 + "px");
     titleDescr.css("height", heightImage * 0.6 + "px");
-    titleDescr.css("max-width", widthImage + "px");
+    titleDescr.css("max-width", widthImage*0.9 + "px");
     titleDescr.css("max-height", heightImage * 0.6 + "px");
-    titleDescr.css("left", leftImage + widthImage + 50 + "px");
+    titleDescr.css("left", leftImage + widthImage + 30 + "px");
     menuContent.css("width", mainImage.width() + "px");
   
   }
