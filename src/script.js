@@ -35,9 +35,9 @@ document.addEventListener("DOMContentLoaded", function() {
     if (parent) {
       const modalDesktop = document.createElement("div");
       modalDesktop.id = "modal-desktop";
-      modalDesktop.classList.add("fixed", "top-0", "left-0", "w-full", "h-full", "items-center", "justify-center", "bg-black", "bg-opacity-90", "flex", "z-10");
+      modalDesktop.classList.add("fixed", "top-0", "left-0", "w-full", "h-full", "items-center", "justify-center", "bg-black", "bg-opacity-90", "flex", "z-10", "justify-center");
       const modalContent = document.createElement("div");
-      modalContent.classList.add("absolute", "top-0", "left-0", "w-full", "h-full", "flex", "items-center", "justify-center");
+      modalContent.classList.add("w-full", "h-full", "flex", "items-center", "justify-center");
       const closeButton = document.createElement("button");
       closeButton.classList.add("absolute", "top-0", "right-0", "m-4", "text-3xl", "text-white", "hover:text-gray-300", "focus:outline-none");
       closeButton.innerText = "x";
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
       };
       const image = document.createElement("img");
       image.src = src;
-      image.classList.add("w-auto", "h-[90%]", "max-w-full", "max-h-full");
+      image.classList.add("w-auto", "h-auto" ,"lg:h-[90%]", "max-w-full", "max-h-full");
       image.alt = "Image en grand";
 
       modalContent.appendChild(closeButton);
@@ -146,9 +146,13 @@ $(document).ready(function() {
     // Application de la hauteur au titre en français
     let frTitle = $("#vertical");
     frTitle.css("top", topImage + "px");
-    frTitle.css("left", title.offset().left + title.width() - 60 + "px");
-    // frTitle.css("height", heightImage + "px");
     ajusterPolice(frTitle, mainImage.height());
+    frTitle.css("left", title.offset().left + title.width() - (frTitle.outerWidth()*0.75) + "px");
+    console.log(`largeur du titre vertical H : ${frTitle.outerWidth()}`);
+    console.log(`largeur du texte vertical h : ${frTitle.innerWidth()}`);
+
+ 
+    // frTitle.css("height", heightImage + "px");
     // fontSizeAdapted(frTitle, desiredWidth, desiredHeight);
   
     let titleDescr = $("#title-descr");
