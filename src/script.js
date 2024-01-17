@@ -10,7 +10,16 @@ document.addEventListener("DOMContentLoaded", function() {
     "./images/gallery/8.jpeg",
     "./images/gallery/9.jpeg",
     "./images/gallery/10.jpeg",
-    "./images/gallery/11.jpeg",
+    "./images/gallery/12.jpeg",
+    "./images/gallery/13.jpeg",
+    "./images/gallery/14.jpeg",
+    "./images/gallery/15.jpeg",
+    "./images/gallery/16.jpeg",
+    "./images/gallery/17.jpeg",
+    "./images/gallery/18.jpeg",
+    "./images/gallery/19.jpeg",
+    "./images/gallery/20.jpeg",
+    "./images/gallery/21.jpeg",
   ];
 
   function displayImages() {

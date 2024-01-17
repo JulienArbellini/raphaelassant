@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=devise-height, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/style/main.css">
+  <link href="../dist/output.css" rel="stylesheet">
+  <title>Page Title</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+
+<body class="font-poppins overflow-x-hidden">
+  <!-- <div id="viewport-size" class="bg-red-400"></div> -->
+  <div class="sm:h-screen">
+    <!-- Menu mobile condenced -->
+    <div id="menu-mobile"
+      class="fixed p-7 flex justify-center items-center h-[5%]  w-full bg-white  z-9 lg:hidden">
+      <h1 class="text-2xl font-poppins font-medium tracking-[.08em]">Raphaël Assante</h1>
+      <div class="ml-auto button">Menu</div>
+    </div>
+
+
+    <!-- Menu desktop -->
+    <div id="menu-desktop" class="fixed justify-center bg-white opacity-75 items-center w-full z-9 hidden lg:flex sm:p-[40px] z-30">
+      <div class="w-50 flex justify-center items-center">
+        <a href="./" id="title" class="text-3xl  font-medium font-poppins ml-5">Raphaël Assante</a>
+      </div>
+      <div id="menu-list" class="ml-10 flex justify-between">
+        <div id="content-list" class="w-full flex flex-row justify-between text-[2vh]">
+          <div class="h-full flex justify-start items-center underline underline-offset-8">
+            <a href="" class="text-gl font-poppins font-light ">KAO-LIANG & BETEL NUTS</a>
+          </div>
+          <div class="flex justify-start items-center">
+            <a href="./print.html" class="text-gl font-poppins font-light">Print</a>
+          </div>
+          <div class=" flex justify-start items-center">
+            <a href="./contact.html" class="text-gl font-poppins font-light">About/Contact</a>
+          </div>
+        </div>
+        </div>
+      <div class=" flex justify-start items-center ml-auto">
+        <a href="https://www.instagram.com/raph_lakhal/?hl=en"><img class="w-[20px] h-[20px] " src="./images/logos/instagram.png" alt=""></a>
+      </div>
+
+    </div>
+    <!-- Main content -->
+    <div class="h-[100%] w-screen flex justify-between flex-col sm:h-[100%]">
+      <!-- Menu mobile open -->
+      <div id="navbar" class="h-screen font-thin flex flex-col items-center hidden">
+        <div class="h-4/5 flex flex-col justify-center items-center ">
+          <a href="./" class="text-3xl text-center">KAO-LIANG & BETEL NUTS</a>
+          <hr class="w-full">
+          <a href="./print.html" class="text-3xl">Print</a>
+          <hr class="w-full">
+          <a href="./contact.html" class="text-3xl">About/Contact</a>
+        </div>
+        <div class="h-1/5 w-full flex items-center justify-center mt-auto">
+          <img class="w-[30px] h-[30px]" src="./images/logos/instagram.png" alt="">
+        </div>
+      </div>
+      <!-- Main content mobile-->
+      <div id="content" class="mt-16 h-full p-2 box-border flex-col justify-center items-center relative lg:hidden">
+        <div class="min-h-[620px]">
+          <div id="vertical-mobile"
+            class="absolute top-[75px] left-[20px] sm:left-[170px] h-fit text-end text-[28px] sm:text-[46px] rotate-180 tracking-[.08em] font-semibold z-index-1">
+            KAO-LIANG & BETEL NUTS
+          </div>
+
+          <img class="absolute top-[75px] left-[70px] h-[400px] z-index-2 sm:h-[654px] sm:left-[280px]" src="./images/1.jpeg" alt="" onclick="showModal()">
+          <div class="fixed top-0 left-0 w-full h-full items-center justify-center bg-black bg-opacity-50 hidden z-10" id="modal">
+            <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center ">
+              <button class="absolute top-0 right-0 m-4 text-3xl text-white hover:text-gray-300 focus:outline-none" onclick="closeModal()">X</button>
+              <img src="./images/1.jpeg" class="h-auto w-[80%] max-w-full max-h-full" alt="Image en grand">
+            </div>
+          </div>
+          <div class="absolute top-[472px] sm:top-[730px] left-[222px] sm:left-[542px] w-fit font-extrabold  flex text-[1.5em] sm:text-[38px] justify-end">
+            檳 榔 高 粱
+          </div>
+        </div>
+      </div>
+
+      <div id="content-desktop" class="box-border hidden lg:block">
+
+
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+
+</body>
+<script type="text/javascript" src="./script.js"></script>
+
+</html>
+
