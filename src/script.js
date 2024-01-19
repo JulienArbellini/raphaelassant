@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function() {
     "./images/gallery/17.jpeg",
     "./images/gallery/18.jpeg",
     "./images/gallery/19.jpeg",
-    "./images/gallery/20.jpeg",
     "./images/gallery/21.jpeg",
   ];
 
