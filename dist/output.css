@@ -705,6 +705,22 @@ video {
   height: 100vh;
 }
 
+.h-\[34\] {
+  height: 34;
+}
+
+.h-\[34\.\] {
+  height: 34.;
+}
+
+.h-\[34\.95\] {
+  height: 34.95;
+}
+
+.h-\[34\.95px\] {
+  height: 34.95px;
+}
+
 .max-h-full {
   max-height: 100%;
 }
@@ -780,6 +796,18 @@ video {
 
 .w-\[100\%\] {
   width: 100%;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[590\] {
+  width: 590;
+}
+
+.w-\[590px\] {
+  width: 590px;
 }
 
 .max-w-full {
@@ -936,6 +964,24 @@ video {
   line-height: 1.75rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-\[23px\] {
+  font-size: 23px;
+}
+
+.text-\[24px\] {
+  font-size: 24px;
+}
+
 .font-\[200\] {
   font-weight: 200;
 }
@@ -968,9 +1014,89 @@ video {
   letter-spacing: .08em;
 }
 
+.tracking-\[\] {
+  letter-spacing: ;
+}
+
+.tracking-\[1\] {
+  letter-spacing: 1;
+}
+
+.tracking-\[0\] {
+  letter-spacing: 0;
+}
+
+.tracking-\[0\.\] {
+  letter-spacing: 0.;
+}
+
+.tracking-\[0\.5\] {
+  letter-spacing: 0.5;
+}
+
+.tracking-\[0\.5px\] {
+  letter-spacing: 0.5px;
+}
+
+.tracking-\[px\] {
+  letter-spacing: px;
+}
+
+.tracking-\[5px\] {
+  letter-spacing: 5px;
+}
+
+.tracking-\[1px\] {
+  letter-spacing: 1px;
+}
+
+.tracking-\[0\.3px\] {
+  letter-spacing: 0.3px;
+}
+
+.tracking-\[0\.px\] {
+  letter-spacing: 0.px;
+}
+
+.tracking-\[0\.05px\] {
+  letter-spacing: 0.05px;
+}
+
+.tracking-\[0\.0px\] {
+  letter-spacing: 0.0px;
+}
+
+.tracking-\[0\.005px\] {
+  letter-spacing: 0.005px;
+}
+
+.tracking-\[-1px\] {
+  letter-spacing: -1px;
+}
+
+.tracking-\[-0px\] {
+  letter-spacing: -0px;
+}
+
+.tracking-\[-0\.5px\] {
+  letter-spacing: -0.5px;
+}
+
+.tracking-\[0px\] {
+  letter-spacing: 0px;
+}
+
+.tracking-\[\.25em\] {
+  letter-spacing: .25em;
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\] {
+  color: ;
 }
 
 .underline {
@@ -1138,6 +1264,16 @@ video {
 
   .lg\:p-16 {
     padding: 4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:w-\[519px\] {
+    width: 519px;
+  }
+
+  .xl\:w-\[590px\] {
+    width: 590px;
   }
 }
 
