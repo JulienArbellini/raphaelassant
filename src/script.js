@@ -23,20 +23,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function displayImages() {
     const imageContainer = document.getElementById("gallery");
-
+  
     let count = 0;
-
+  
     imageList.forEach((imageSrc) => {
       const img = document.createElement("img");
       img.src = imageSrc;
       img.id = "image" + count;
+      
+      // Ajouter le style du pointeur
+      img.style.cursor = "pointer";
+  
       img.onclick = function() {
         extendImage(img.id, img.src);
       };
+  
       imageContainer.appendChild(img);
       count++;
     });
   }
+  
 
   function extendImage(id, src) {
     const parent = document.getElementById(id);
