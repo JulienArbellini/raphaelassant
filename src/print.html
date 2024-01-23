@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=devise-height, initial-scale=1.0">
     <link rel="stylesheet" href="../src/style/main.css">
-    <link href="../dist/output.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png" />
@@ -13,6 +13,7 @@
     <title>Raphaël Assante</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
@@ -50,7 +51,7 @@
             <div class="w-50 flex justify-center items-center">
                 <a href="./" id="title" class="text-3xl  font-medium font-poppins ml-5">Raphaël Assante</a>
             </div>
-            <div id="menu-list" class="w-[590px] h-[34.95px] letter flex ml-10 justify-between text-[23px]">
+            <div id="menu-list" class="w-[590px] h-[34.95px] letter flex ml-10 justify-between text-[2vh]">
                 <div class=" h-full flex justify-start items-center ">
                     <a href="./" class="font-poppins  font-light hover:underline underline-offset-8 ">KAO-LIANG & BETEL NUTS</a>
                 </div>
@@ -81,6 +82,10 @@
 
 </body>
 <script>
+    var hauteurEcran = window.innerHeight;
+    var largeurMenu = (hauteurEcran*0.75)/1.48 
+    let menuContent = $("#menu-list");
+    menuContent.css("width", largeurMenu + "px");
     const button = document.querySelector('.button');
     const navbar = document.querySelector('#navbar');
     const content = document.querySelector('#content');
