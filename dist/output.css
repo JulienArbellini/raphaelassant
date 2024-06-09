@@ -620,6 +620,10 @@ video {
   margin-top: 4rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .mt-\[8rem\] {
   margin-top: 8rem;
 }
@@ -854,6 +858,10 @@ video {
   padding: 0.5rem;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
 .p-7 {
   padding: 1.75rem;
 }
@@ -902,6 +910,10 @@ video {
 
 .text-\[2vh\] {
   font-size: 2vh;
+}
+
+.text-\[46px\] {
+  font-size: 46px;
 }
 
 .text-base {
@@ -1125,5 +1137,14 @@ video {
 
   .lg\:p-16 {
     padding: 4rem;
+  }
+
+  .lg\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .lg\:text-\[42px\] {
+    font-size: 42px;
   }
 }

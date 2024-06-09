@@ -1,3 +1,5 @@
+// script.js
+
 document.addEventListener("DOMContentLoaded", function() {
   const imageList = [
     "./images/gallery/v2/1.jpg",
@@ -23,28 +25,52 @@ document.addEventListener("DOMContentLoaded", function() {
     "./images/gallery/v2/21.jpg",
   ];
 
-  function displayImages() {
+  const imageListLow = [
+    "./images/gallery/v2/low/1-min.jpg",
+    "./images/gallery/v2/low/2-min.jpg",
+    "./images/gallery/v2/low/3-min.jpg",
+    "./images/gallery/v2/low/4-min.jpg",
+    "./images/gallery/v2/low/5-min.jpg",
+    "./images/gallery/v2/low/6-min.jpg",
+    "./images/gallery/v2/low/7-min.jpg",
+    "./images/gallery/v2/low/8-min.jpg",
+    "./images/gallery/v2/low/9-min.jpg",
+    "./images/gallery/v2/low/10-min.jpg",
+    "./images/gallery/v2/low/11-min.jpg",
+    "./images/gallery/v2/low/12-min.jpg",
+    "./images/gallery/v2/low/13-min.jpg",
+    "./images/gallery/v2/low/14-min.jpg",
+    "./images/gallery/v2/low/15-min.jpg",
+    "./images/gallery/v2/low/16-min.jpg",
+    "./images/gallery/v2/low/17-min.jpg",
+    "./images/gallery/v2/low/18-min.jpg",
+    "./images/gallery/v2/low/19-min.jpg",
+    "./images/gallery/v2/low/20-min.jpg",
+    "./images/gallery/v2/low/21-min.jpg",
+  ];
+
+  function displayImages(imageSrcList) {
     const imageContainer = document.getElementById("gallery");
-  
+    imageContainer.innerHTML = ''; // Clear existing images
+
     let count = 0;
-  
-    imageList.forEach((imageSrc) => {
+
+    imageSrcList.forEach((imageSrc) => {
       const img = document.createElement("img");
       img.src = imageSrc;
       img.id = "image" + count;
-      
+
       // Ajouter le style du pointeur
       img.style.cursor = "pointer";
-  
+
       img.onclick = function() {
         extendImage(img.id, img.src);
       };
-  
+
       imageContainer.appendChild(img);
       count++;
     });
   }
-  
 
   function extendImage(id, src) {
     const parent = document.getElementById(id);
@@ -72,17 +98,29 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  displayImages();
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) {
+      modal.remove();
+    }
+  }
+
+  function checkConnectionAndLoadImages() {
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+
+    if (connection) {
+      if (connection.effectiveType.includes("2g") || connection.saveData) {
+        displayImages(imageListLow);
+      } else {
+        displayImages(imageList);
+      }
+    } else {
+      displayImages(imageList);
+    }
+  }
+
+  checkConnectionAndLoadImages();
 });
-
-
-function closeModal(id) {
-  const modal = document.getElementById(id);
-  modal.remove();
-}
-
-
-
 
 function fontSizeAdapted(myText, desiredWidth, desiredHeight) {
   // Définissez la taille de police initiale
@@ -90,14 +128,13 @@ function fontSizeAdapted(myText, desiredWidth, desiredHeight) {
 
   // Boucle jusqu'à ce que la largeur et la hauteur soient égales aux valeurs souhaitées
   while (myText[0].getBoundingClientRect().width < desiredWidth && myText[0].getBoundingClientRect().height < desiredHeight) {
-    // Augmentez la taille de police de 0,5 pixel à chaque itération
+    // Augmentez la taille de police de 0.5 pixel à chaque itération
     fontSize += 0.5;
 
     // Appliquez la nouvelle taille de police à l'élément de texte
     myText.css("font-size", fontSize + "px");
   }
 }
-
 
 function ajusterPolice(element, hauteurCible) {
   // Obtenez la largeur actuelle de l'élément et la taille de la police
@@ -118,13 +155,6 @@ function ajusterPolice(element, hauteurCible) {
   // Appliquez la nouvelle taille de police à l'élément
   elementDOM.style.fontSize = `${nouvelleTaillePolice}px`;
 }
-
-
-
-
-
-
-
 
 $(document).ready(function() {
   function responsive() {
@@ -187,5 +217,4 @@ $(document).ready(function() {
     $('body').fadeIn('slow');
   });
 });
-
 
