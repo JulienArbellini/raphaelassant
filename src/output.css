@@ -632,6 +632,14 @@ video {
   margin-top: auto;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -727,6 +735,10 @@ video {
 
 .h-\[20vh\] {
   height: 20vh;
+}
+
+.h-\[50vh\] {
+  height: 50vh;
 }
 
 .max-h-full {
@@ -946,6 +958,10 @@ video {
   font-size: 17px;
 }
 
+.text-\[1\.5vh\] {
+  font-size: 1.5vh;
+}
+
 .font-\[200\] {
   font-weight: 200;
 }
@@ -1052,6 +1068,10 @@ video {
 
   .sm\:h-screen {
     height: 100vh;
+  }
+
+  .sm\:h-\[20vh\] {
+    height: 20vh;
   }
 
   .sm\:w-\[50\%\] {

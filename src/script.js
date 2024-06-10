@@ -162,6 +162,7 @@ $(document).ready(function() {
     $.ajaxSetup({ cache: false });
     //  menu-content
     let menuContent = $("#menu-list");
+    let chContent = $("#text-chinese");
     
     //title
     let title = $("#title");
@@ -188,6 +189,7 @@ $(document).ready(function() {
     chTitle.css("top", heightImage + topImage + "px");
     fontSizeAdapted(chTitle, widthImage / 2, 300);
     chTitle.css("left", leftImage + widthImage / 2 + "px");
+    // chContent.css("left", leftImage + widthImage / 2 + "px");
   
     // Application de la hauteur au titre en français
     let frTitle = $("#vertical");
@@ -208,6 +210,8 @@ $(document).ready(function() {
     titleDescr.css("max-height", heightImage * 0.6 + "px");
     titleDescr.css("left", leftImage + widthImage + 30 + "px");
     menuContent.css("width", mainImage.width() + "px");
+    // chContent.css("width", mainImage.width() + menuContent.width() + chTitle.width() + "px");
+
   
   }
 
