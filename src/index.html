@@ -48,7 +48,7 @@
         </div>
         </div>
       <div class=" flex justify-start items-center ml-auto">
-        <a href="https://www.instagram.com/raph_lakhal/?hl=en"><img class="w-[20px] h-[20px] " src="./images/logos/instagram.png" alt=""></a>
+        <a href="https://www.instagram.com/raph_assante?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img class="w-[20px] h-[20px] " src="./images/logos/instagram.png" alt=""></a>
       </div>
 
     </div>
@@ -64,7 +64,7 @@
           <a href="./contact.html" class="text-3xl">About/Contact</a>
         </div>
         <div class="h-1/5 w-full flex items-center justify-center mt-auto">
-          <img class="w-[30px] h-[30px]" src="./images/logos/instagram.png" alt="">
+          <a href="https://www.instagram.com/raph_assante?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img class="w-[30px] h-[30px]" src="./images/logos/instagram.png" alt=""></a>
         </div>
       </div>
       <!-- Main content mobile-->
@@ -131,7 +131,7 @@
   </div>
 
   <!-- Section texte en chinois -->
-<div id="text-chinese" class="w-full h-[50vh] sm:h-[20vh] flex flex-col justify-center items-center mt-8 p-4 lg:px-24">
+<div id="text-chinese" class="w-full h-[50vh] sm:h-[20vh] hidden lg:flex flex-col justify-center items-center mt-8 p-4 lg:px-24">
   <div class="w-[80%]">
     <p class="text-center text-[2vh] font-light">
       KAO-LIANG & BETEL NUTS 是 2020 年 3 月啟動的攝影項目。
@@ -139,6 +139,16 @@
       以拍攝，攝影師 Raphael Assante 想要描述與捕捉萬華區的人和獨一無二的氛圍。
       無家可歸者、性工作者、茶館女招待、歹徒、跳蚤市場小販、僧侶、遊客和養老金領取者，等所謂邊緣人 每天都混雜在在不斷變化的場景。
     </p>
+  </div>
+</div>
+
+  <!-- Section texte en chinois mobile -->
+<div id="text-chinese-mobile" class="min-h-[420px] w-full flex flex-col justify-start items-center sm:absolute md:w-[441px]  md:top-[870px] md:text-[16px] md:min-h-0 md:left-[283px] lg:hidden ">
+  <div class="w-[80%] text-start sm:w-full md:text-center">
+    KAO-LIANG & BETEL NUTS 是 2020 年 3 月啟動的攝影項目。
+    萬華區龍山寺這個區域是台北市充滿歷史性和精神老社區。
+    以拍攝，攝影師 Raphael Assante 想要描述與捕捉萬華區的人和獨一無二的氛圍。
+    無家可歸者、性工作者、茶館女招待、歹徒、跳蚤市場小販、僧侶、遊客和養老金領取者，等所謂邊緣人 每天都混雜在在不斷變化的場景。
   </div>
 </div>
 
@@ -173,11 +183,13 @@
     const content = document.querySelector('#content');
     const text = document.querySelector('#text-description-mobile');
     const gallery = document.querySelector('#gallery');
+    const chtext = document.querySelector("#text-chinese-mobile");
     button.addEventListener('click', () => {
         navbar.classList.toggle('hidden');
         content.classList.toggle('hidden');
         text.classList.toggle('hidden');
         gallery.classList.toggle('hidden');
+        chtext.classList.toggle('hidden');
     })
 </script>
 

@@ -40,7 +40,7 @@
                 <a href="./contact.html" class="text-3xl">About/Contact</a>
             </div>
             <div class="h-1/5 w-full flex items-center justify-center mt-auto">
-                <img class="w-[30px] h-[30px]" src="./images/logos/instagram.png" alt="">
+                <a href="https://www.instagram.com/raph_assante?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img class="w-[30px] h-[30px]" src="./images/logos/instagram.png" alt=""></a>
             </div>
         </div>
 
@@ -63,12 +63,12 @@
                 </div>
             </div>
             <div class=" flex justify-start items-center ml-auto">
-                <a href="https://www.instagram.com/raph_lakhal/?hl=en"><img class="w-[20px] h-[20px] " src="./images/logos/instagram.png" alt=""></a>
+                <a href="https://www.instagram.com/raph_assante?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img class="w-[20px] h-[20px] " src="./images/logos/instagram.png" alt=""></a>
             </div>
 
         </div>
 
-        <div class="h-full flex flex-col lg:items-start lg:justify-start justify-center items-center w-full lg:p-16 ">
+        <div id="wip" class="h-full flex flex-col lg:items-start lg:justify-start justify-center items-center w-full lg:p-16 ">
             <div class="font-[300] mt-[8rem] w-[85%] lg:w-[60%] flex flex-col gap-5 text-base mb-[130px]">
                 <div>
                     <span class="font-semibold">Work in progress</span>
@@ -89,13 +89,11 @@
     const button = document.querySelector('.button');
     const navbar = document.querySelector('#navbar');
     const content = document.querySelector('#content');
-    const text = document.querySelector('#text-description-mobile');
+    const text = document.querySelector('#wip');
     const gallery = document.querySelector('#gallery');
     button.addEventListener('click', () => {
         navbar.classList.toggle('hidden');
-        content.classList.toggle('hidden');
         text.classList.toggle('hidden');
-        gallery.classList.toggle('hidden');
     })
   // window.addEventListener("resize", function () {
   //   var width = window.innerWidth;
