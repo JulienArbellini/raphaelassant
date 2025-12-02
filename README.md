@@ -1,7 +1,7 @@
 # Site Photographe – Raphaël Assant 📸  
 _Un site vitrine premium avec positionnements précis et responsive millimétré._
 
-![thumbnail](https://res.cloudinary.com/dm0cuvnzt/image/upload/v1736429542/hqyysmyvme5ytwpvzc7u.gif)
+![thumbnail](src/images/thumbnail.gif)
 
 ---
 
